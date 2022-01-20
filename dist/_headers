@@ -5,4 +5,3 @@ https://:project.pages.dev/*
   X-Frame-Options: DENY
   X-Content-Type-Options: nosniff
   Access-Control-Allow-Origin: *
-  Content-Security-Policy: default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; script-src 'self' https://ennuizel.github.io https://ez.craig.horse; font-src 'self' https://cdnjs.cloudflare.com
