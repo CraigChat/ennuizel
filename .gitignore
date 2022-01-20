@@ -1,12 +1,19 @@
-awp/ennuizel-player.js
+# Built files
+ennuizel-player.js
 ennuizel.js
-ennuizel.json
-fa/
-libav/*.js
-libav/*.wasm
 localforage.min.js
-node_modules
-package-lock.json
 sw.js
 
+# Legacy
+./libav/
+fa/
+
+# Other
+.idea/
+.vscode/
+node_modules
+package-lock.json
 .*.swp
+libav.tmp.zip
+*.tmp
+*.log

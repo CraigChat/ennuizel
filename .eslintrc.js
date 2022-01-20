@@ -18,6 +18,19 @@ module.exports = {
                 "no-empty": "off",
                 "prefer-spread": "off"
             }
+        },
+        {
+            files: ["scripts/*"],
+            env: {
+                node: true
+            },
+            rules: {
+                "@typescript-eslint/no-explicit-any": "off",
+                "@typescript-eslint/no-this-alias": "off",
+                "no-constant-condition": "off",
+                "no-empty": "off",
+                "prefer-spread": "off"
+            }
         }
     ]
 };

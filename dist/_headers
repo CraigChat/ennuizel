@@ -1,0 +1,8 @@
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex
+
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Access-Control-Allow-Origin: *
+  Content-Security-Policy: default-src 'self';img-src 'self' data:;style-src 'self' https: 'unsafe-inline' https://cdnjs.cloudflare.com;script-src 'self' https: https://ennuizel.github.io https://ez.craig.horse

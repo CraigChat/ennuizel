@@ -2,20 +2,23 @@
   "name": "ennuizel",
   "version": "2.0.0",
   "description": "Browser-based audio editor",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx concurrently \"npm run build:localforage\" \"npm run build:ennuizel\" \"npm run build:sw\" \"npm run build:player\"",
+    "build:localforage": "npx ncp ./node_modules/localforage/dist/localforage.min.js ./dist/localforage.min.js",
+    "build:ennuizel": "node scripts/build.js",
+    "build:sw": "tsc --lib es2015,dom src/sw.ts --outFile dist/sw.js",
+    "build:player": "tsc -t es2015 --lib es2015,dom src/ennuizel-player.ts --outFile dist/ennuizel-player.js",
+    "serve": "npx serve dist"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Yahweasel/ennuizel.git"
-  },
+  "repository": "https://github.com/CraigChat/ennuizel",
   "author": "Yahweasel",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Yahweasel/ennuizel/issues"
+    "url": "https://github.com/CraigChat/ennuizel/issues"
   },
-  "homepage": "https://github.com/Yahweasel/ennuizel#readme",
+  "homepage": "https://github.com/CraigChat/ennuizel#readme",
   "dependencies": {
     "@types/file-saver": "^2.0.3",
     "browserify": "^17.0.0",
@@ -32,6 +35,9 @@
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "@typescript-eslint/parser": "^5.0.0",
     "eslint": "^8.0.1",
-    "madge": "^5.0.1"
+    "madge": "^5.0.1",
+    "minimatch": "^3.0.4",
+    "node-fetch": "^3.2.0",
+    "node-stream-zip": "^1.15.0"
   }
 }
