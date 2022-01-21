@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx concurrently \"npm run build:localforage\" \"npm run build:ennuizel\" \"npm run build:sw\" \"npm run build:player\"",
+    "build": "npx concurrently \"npm run build:localforage\" \"npm run build:ennuizel\" \"npm run build:sw\" \"npm run build:player\" \"npm run build:plugin\"",
     "build:localforage": "npx ncp ./node_modules/localforage/dist/localforage.min.js ./dist/localforage.min.js",
     "build:ennuizel": "node scripts/build.js",
     "build:sw": "tsc --lib es2015,dom src/sw.ts --outFile dist/sw.js",
