@@ -1,0 +1,3 @@
+[submodule "ennuizel-craig-plugin"]
+	path = ennuizel-craig-plugin
+	url = https://github.com/CraigChat/ennuizel-craig-plugin

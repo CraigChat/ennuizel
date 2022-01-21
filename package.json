@@ -10,6 +10,7 @@
     "build:ennuizel": "node scripts/build.js",
     "build:sw": "tsc --lib es2015,dom src/sw.ts --outFile dist/sw.js",
     "build:player": "tsc -t es2015 --lib es2015,dom src/ennuizel-player.ts --outFile dist/ennuizel-player.js",
+    "build:plugin": "cd ennuizel-craig-plugin && yarn && yarn build && npx ncp ./ennuizel-craig.js ../dist/ennuizel-craig.js",
     "serve": "npx serve dist"
   },
   "repository": "https://github.com/CraigChat/ennuizel",

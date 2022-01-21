@@ -103,7 +103,7 @@ export async function loadPlugin(url: string, opts: {
         haveUserDefinedPlugins = true;
 
     // Sanitize the URL
-    if (url.indexOf("://") < 0)
+    if (url.indexOf("://") < 0 && !url.startsWith("/"))
         url = "https://" + url;
 
     // In case this is nested, remember the previous registration
